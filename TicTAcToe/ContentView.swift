@@ -64,7 +64,13 @@ struct ContentView: View {
     }
     
     func decideWinner() {
-        
+        if checkMoves(player: "X") {
+            message = "Player X won the game"
+            self.gameOver.toggle()
+        } else if checkMoves(player: "O") {
+            message = "Player O won the game"
+            self.gameOver.toggle()
+        }
     }
     
     func checkMoves(player: String) -> Bool {
