@@ -22,7 +22,7 @@ struct ContentView: View {
                         Color.blue
                         
                         Color.white
-                            .opacity(moves[index] != "" ? 1 : 0)
+                            .opacity(moves[index] == "" ? 1 : 0)
                         
                         Text(moves[index])
                             .font(.system(size: 55))
@@ -33,8 +33,8 @@ struct ContentView: View {
                         .frame(width: width, height: width)
                         .cornerRadius(15)
                     .rotation3DEffect(
-                        .init(degrees: moves[index] != "" ?
-                            180 : 0),
+                        .init(degrees: moves[index] !=
+                                "" ? 180 : 0),
                         axis: (x: 0.0, y: 1.0, z: 0.0),
                         anchor: .center,
                         anchorZ: 0.0,
@@ -58,6 +58,11 @@ struct ContentView: View {
     var width: CGFloat {
         return (UIScreen.main.bounds.width - 60)
             / 3
+    }
+    
+    func checkMoves(player: String) -> Bool {
+            
+        
     }
 }
 
