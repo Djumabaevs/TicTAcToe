@@ -13,6 +13,9 @@ struct ContentView: View {
         Array(repeating: "", count: 9)
     @State var currentUser = false
     
+    @State var message = ""
+    @State var gameOver = false
+    
     var body: some View {
        
         NavigationView {
@@ -58,6 +61,10 @@ struct ContentView: View {
     var width: CGFloat {
         return (UIScreen.main.bounds.width - 60)
             / 3
+    }
+    
+    func decideWinner() {
+        
     }
     
     func checkMoves(player: String) -> Bool {
