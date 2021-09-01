@@ -71,11 +71,17 @@ struct ContentView: View {
         }
         //Vertical check
         for i in 0...2 {
-            if moves[i] == player && moves[i+1] == player &&
-                moves[i+3] == player {
+            if moves[i] == player && moves[i+3] == player &&
+                moves[i+6] == player {
                 return true
             }
         }
+        //Diagonal check
+        if moves[0] == player && moves[5] == player &&
+            moves[8] == player {
+            return true
+        }
+        
         
         return false
     }
