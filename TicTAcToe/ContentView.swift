@@ -55,6 +55,9 @@ struct ContentView: View {
             }).padding(15)
             .preferredColorScheme(.dark)
             .navigationTitle("Tic Tac Toe")
+            .onChange(of: moves, perform: { value in
+                decideWinner()
+            })
         }
     }
     
