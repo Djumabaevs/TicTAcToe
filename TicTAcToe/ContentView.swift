@@ -62,7 +62,12 @@ struct ContentView: View {
     
     func checkMoves(player: String) -> Bool {
             
-        
+        for i in stride(from: 0, to: 9, by: 3) {
+            if moves[i] == player && moves[i+1] == player &&
+                moves[i+3] == player {
+                return true
+            }
+        }
     }
 }
 
