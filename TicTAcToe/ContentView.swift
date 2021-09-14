@@ -57,6 +57,8 @@ struct ContentView: View {
             .navigationTitle("Tic Tac Toe")
             .onChange(of: moves, perform: { value in
                 decideWinner()
+                
+                
             })
         }
     }
